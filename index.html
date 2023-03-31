@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ホーム | AFnet Account</title>
+    <!--
+        destyle.css v4.0.0 | MIT License
+        https://github.com/nicolas-cusan/destyle.css 
+    -->
+    <link rel="stylesheet" href="css/destyle.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Vue系 本番環境では npm installで導入-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+</head>
+<body>
+    <script>
+        $(document).ready(function(){
+            $('a[href^=#]').click(function(){
+                var speed = 500;
+                var href= $(this).attr("href");
+                var target = $(href == "#" || href == "" ? 'html' : href);
+                var position = target.offset().top;
+                $("html, body").animate({scrollTop:position}, speed, "swing");
+                return false;
+            });
+        });
+    </script>
+    <header id="pc">
+        <div class="left">
+            <img src="img/logo.png" />
+            <nav>
+                <a href="#jump_whats">AFnet Accountとは</a>
+                <a href="#jump_services">対応サービス</a>
+            </nav>
+        </div>
+        <div class="right">
+            <a href="#jump_register">登録</a>
+            <a href="#">ログイン</a>
+        </div>
+    </header>
+    <header id="sm">
+        <img src="img/logo.png" />
+    </header>
+    <div class="wrap">
+        <div class="hero">
+            <div class="text">
+                <p><span>一つのアカウント</span>で、</p>
+                <p id="jump_whats">あなたの可能性を</p>
+                <p><span>さらに広げる。</span></p>
+            </div>
+            <img src="img/hero_illust.png" />
+        </div>
+        <div class="contents">
+            <div class="content" id="whats">
+                <p class="title">AFnet Accountとは？</p>
+                <div class="aligner">
+                    <img src="img/whats_illust.png" />
+                    <div class="text">
+                        <p>@mai_lljが運営するすべてのWebサービスに使える</p>
+                        <p>アカウントを作成・管理するためのサービスです。</p>
+                        <p>AFnetAccountが一つあれば、</p>
+                        <p id="jump_services">すべてのサービスにアクセスすることができます。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="content" id="services">
+                <p class="title">対応サービス</p>
+                <div class="service">
+                    <img src="img/services_shareaup.png" />
+                    <p>Share.aupでは、自分で作った創作物をプロジェクトファイルや素材と一緒にアップロードし、さまざまな人と共有できます。</p>
+                </div>
+                <div class="service">
+                    <img src="#" />
+                    <p>Pack.anmでは、Aviutlのプラグインを配布したり、半自動でセットを導入したりすることができます。</p>
+                </div>
+                <div class="service">
+                    <img src="" />
+                    <p id="jump_register">coming soon...</p>
+                </div>
+            </div>
+            <div class="content" id="register">
+                <p class="title">登録</p>
+                <div class="aligner">
+                    <p>今すぐ登録して、</p>
+                    <p><span>Share.aup</span>で可能性を広げよう。</p>
+                    <div class="register_holder">
+                        <input type="email" id="email" placeholder="メールアドレス" required>
+                        <button type="submit">登録</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="left">
+                <img src="img/logo_white.png" />
+                <p>©︎2023 mai-llj , Lasxle</p>
+            </div>
+            <div class="right">
+                <div class="text">
+                    <a href="">ページトップ</p></a>
+                    <a href="">新規登録</p></a>
+                    <a href="">ログイン</p></a>
+                </div>
+                <div class="text">
+                    <a href="">利用規約</p></a>
+                    <a href="">プライバシーポリシー</p></a>
+                </div>
+            </div> 
+            <p class="sm">©︎2023 mai-llj , Lasxle</p>
+        </footer>
+    </div>
+</body>
+</html>

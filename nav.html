@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ホーム | AFnet Account</title>
+    <!--
+        destyle.css v4.0.0 | MIT License
+        https://github.com/nicolas-cusan/destyle.css 
+    -->
+    <link rel="stylesheet" href="css/destyle.css">
+    <style>
+        a{
+  color:#000;
+}
+section{
+  text-align: center;
+  padding: 40vh 0;
+}
+.hamburger {
+  position: fixed;
+  top: 26px;
+  right: 0;
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+  z-index: 9;
+}
+.hamburger .line {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  width: 32px;
+  height: 2px;
+  background: #333333;
+  text-align: center;
+}
+.hamburger .line01 {
+  top: 16px;
+  transition: 0.4s ease;
+}
+.hamburger .line02 {
+  top: 26px;
+  transition: 0.4s ease;
+}
+.hamburger .line03 {
+  top: 36px;
+  transition: 0.4s ease;
+}
+.v-line01 {
+  transform: translateY(10px) rotate(-45deg);
+  transition: 0.4s ease;
+}
+.v-line02 {
+  transition: 0.4s ease;
+  opacity: 0;
+}
+.v-line03 {
+  transform: translateY(-10px) rotate(45deg);
+  transition: 0.4s ease;
+}
+.menu-enter-active, .menu-leave-active {
+  transition: opacity 0.4s;
+}
+.menu-enter, .menu-leave-to {
+  opacity: 0;
+}
+.menu li {
+  list-style: none;
+  line-height: 1;
+  padding: 1rem;
+}
+.menu {
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 8;
+  padding: 4vw;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu ul li {
+  font-size: 20px;
+  line-height: 2;
+  text-align:center;
+}
+    </style>
+    <script>
+        var app = new Vue({
+          el: '#nav',
+          data: {
+            active: false
+          }
+        });
+        
+    </script>
+    <!-- Vue系 本番環境では npm installで導入-->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue-burger-menu@2.0.3/dist/vue-burger-menu.umd.js"></script>
+</head>
+<body>
+
+    <nav id="nav">
+        <div class="hamburger" v-on:click='active=!active'>
+            <span class="line line01" v-bind:class="{'v-line01':active}"></span>
+            <span class="line line02" v-bind:class="{'v-line02':active}"></span>
+            <span class="line line03" v-bind:class="{'v-line03':active}"></span>
+        </div>
+        <div class="menu" v-show="active">
+            <ul>
+                <li><a href="#concept" v-on:click='active=!active'>CONCEPT</a></li>
+                <li><a href="#product" v-on:click='active=!active'>PRODUCT</a></li>
+                <li><a href="#company" v-on:click='active=!active'>COMPANY</a></li>
+                <li><a href="#news" v-on:click='active=!active'>NEWS</a></li>
+            </ul>
+        </div>
+    </nav>
+
+<section id="concept">
+  <h2>Concept</h2>
+</section>
+
+<section id="product">
+  <h2>Product</h2>
+</section>
+
+<section id="company">
+  <h2>Company</h2>
+</section>
+
+<section id="news">
+  <h2>News</h2>
+</section>
+</body>
+
+</html>

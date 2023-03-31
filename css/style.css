@@ -1,0 +1,431 @@
+/* 全般 */
+body{
+    width: 100dvw;
+    height: auto;
+    background-color: #fefefe;
+}
+img {
+	user-drag: none;
+	-webkit-user-drag: none;
+	-moz-user-select: none;
+}
+a{
+    text-decoration: none;
+}
+/* header */
+
+header{
+    position: fixed;
+    width: 100%;
+    height: 6dvh;
+    /*background-color: #fefefe;*/
+    padding: 0 2%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1); /* 背景色 */
+    border: 1px solid rgba(255, 255, 255, 0.4); /* ボーダー */
+    border-right-color: rgba(255, 255, 255, 0.2);
+    border-bottom-color: rgba(255, 255, 255, 0.2);
+    -webkit-backdrop-filter: blur(10px); /* ぼかしエフェクト */
+    backdrop-filter: blur(10px);
+    color: #6c757d;
+}
+
+/* header | PC */
+header#pc .left{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+header#pc .left img{
+    width: auto;
+    height: 65%;
+}
+header#pc .left nav{
+    margin-left: 10%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 70%;
+}
+header#pc .left nav a{
+    mix-blend-mode: color-dodge;
+}
+header#pc .left nav a:not(:last-child){
+    margin-right: 2%;
+}
+header#pc .right{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+header#pc .right a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+    height: 70%;
+    background-color: #D29C72;
+    border-radius: 5px;
+    color: #F5F5F5;
+    font-size: 0.9em;
+}
+header#pc .right a:last-child{
+    margin-left: 2em;
+    background-color: #72C5D2;
+}
+header#sm{
+    display: none;
+}
+/* header | sm は下のメディアクエリにあるよ */
+
+/* wrap */
+
+.wrap{
+    padding-top: 6dvh;
+    width: 100%;
+    height: auto;
+}
+
+/* hero */
+
+.wrap .hero{
+    width: 100%;
+    height: 35dvh;
+    background-color: #fef9ed;
+    padding: 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.wrap .text{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.wrap .hero .text span{
+    background: linear-gradient(transparent 60%,#FDD5D5 30%);
+    width: 2em;
+}
+.wrap .hero .text p{
+    font-size: 3dvw;
+    line-height: 5.5dvw;
+    color: #707070
+}
+.wrap .hero img{
+    width: auto;
+    height: 25dvh;
+}
+
+/* contents */
+
+/* 色指定 */
+
+.wrap .contents div#whats{
+    background-color: #F1EDE3;
+}
+.wrap .contents #services{
+    background-color: #F1E5E3;
+}
+.wrap .contents #register{
+    background-color: #F6E7D5;
+}
+
+/* contents */
+
+.wrap .contents{
+    width: 100%;
+    height: auto;
+    padding: 5% 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* content */
+.wrap .contents .content{
+    width: auto;
+    height: 50dvh;
+    aspect-ratio: 16/9;
+    padding: 3% 5%;
+}
+.wrap .contents .content:not(:last-child){
+    margin-bottom: 5%;
+}
+.wrap .contents .title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    color: #707070;
+}
+.wrap .contents .title::before,
+.wrap .contents .title::after{
+    content: "";
+    width: 30px;
+    height: 2px;
+    background: #707070;
+}
+.wrap .contents .title::before{
+    transform: rotate(60deg)
+}
+.wrap .contents .title::after{
+    transform: rotate(-60deg);
+}
+.wrap .contents .aligner{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.wrap .contents .aligner img{
+    width: auto;
+    height: 15dvh;
+}
+
+/* whats */
+
+.wrap .contents div#whats .aligner .text{
+    padding: 5%;
+    border-radius: 10px;
+    background-color: #FEFEFE;
+    align-items: flex-end;
+    line-height: 2em;
+}
+
+/* services */
+.wrap .contents div#services{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+.wrap .contents div#services .service{
+    width: 90%;
+    height: 25%;
+    background-color: #fefefe;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2%;
+}
+
+.wrap .contents div#services .service:not(last-child){
+    margin-bottom: 1%;
+}
+.wrap .contents div#services .service img{
+    width: auto;
+    height: 65%;
+}
+.wrap .contents div#services .service p{
+    width: 75%;
+    font-size: 0.9em;
+}
+
+/* register */
+.wrap .contents div#register .aligner{
+    flex-direction: column;
+    justify-content: center;
+}
+.wrap .contents div#register .aligner p{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+.wrap .contents div#register .aligner span{
+    padding: 2% 4%;
+    background-color: #d9a0a0;
+    color: #f0f0f0;
+}
+.wrap .contents div#register .aligner a{
+    padding: 2% 4%;
+    background-color: #d9c1a0;
+    color: #f0f0f0;
+}
+.wrap .contents div#register .aligner .register_holder{
+    width: 100%;
+    height: 15%;
+    color: #0f0f0f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrap .contents div#register .aligner .register_holder input{
+    width: 50%;
+    height: 100%;
+    border: 1px solid #0f0f0f;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    color: #0f0f0f;
+}
+
+.wrap .contents div#register .aligner .register_holder button{
+    margin-left: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+    height: 100%;
+    background-color: #D29C72;
+    border-radius: 5px;
+    color: #F5F5F5;
+    font-size: 1.5em;
+}
+footer{
+    width: 100%;
+    height: 20dvh;
+    background-color: #404040;
+    padding: 2% 2%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer .left{
+    width: 50%;
+    height: 100%;
+    color: #fefefe;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-direction: column;
+}
+footer .right{
+    width: 50%;
+    height: 100%;
+    color: #fefefe;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    flex-direction: column;
+}
+footer .left img{
+    width: auto;
+    height: 60%;
+}
+footer .right .text{
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.3em;
+    text-decoration: underline;
+}
+footer .right .text a:not(:last-child){
+    margin-right: 2em;
+}
+.sm{
+    display: none;
+}
+
+@media screen and (max-width: 1064px) {
+    body{
+        font-size: 14px;
+    }
+    header#pc{
+        display: none;
+    }
+    header{
+        height: 8dvh;
+        position: fixed;
+    }
+    header#sm{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    header#sm img{
+        width: auto;
+        height: 70%;
+    }
+    .wrap{
+        padding-top: 8dvh;
+        width: 100%;
+        overflow: hidden;
+    }
+    .wrap .hero{
+        width: 100%;
+        height: 20dvh;
+        margin:0;
+        padding:0;
+    }
+    .wrap .hero .text p{
+        font-size: 5dvw;
+        line-height: 5.5dvw;
+        color: #707070
+    }
+    .wrap .hero img{
+        width: 40%;
+        height: auto;
+    }
+    .wrap .contents{
+        padding: 5% 0;
+    }
+    .wrap .contents .content{
+        width: 100%;
+        height: auto;
+    }
+    .wrap .contents div#whats{
+        font-size: 0.9em;
+    }
+    .wrap .contents div#whats img{
+        display: none;
+    }
+    .wrap .contents div#whats .aligner .text{
+        padding: 5%;
+        border-radius: 10px;
+        background-color: #FEFEFE;
+        align-items: center;
+        line-height: 2em;
+    }
+    .wrap .contents div#services .service p{
+        width: 60%;
+        font-size: 0.8em;
+    }
+    .wrap .contents div#register .aligner p{
+        font-size: 1.2em;
+    }
+    .wrap .contents div#register .aligner .register_holder input{
+        font-size: 0.9em;
+    }
+    .wrap .contents div#register .aligner .register_holder button{
+        font-size: 0.9em;
+    }
+    footer{
+        flex-direction: column;
+        justify-content: center;
+        align-items: space-between;
+    }
+    footer .right{
+        width: 100%;
+        height: 50%;
+        align-items: center;
+    }
+    footer .left{
+        width: 100%;
+        height: 50%;
+        align-items: center;
+    }
+    footer .left p{
+        display: none;
+    }
+    footer .right .text{
+        font-size: 1em;
+    }
+    .sm {
+        display: block;
+        font-size: 0.5em;
+        color: #f0f0f0;
+    }
+}
