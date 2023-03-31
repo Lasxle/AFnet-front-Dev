@@ -1,8 +1,11 @@
 /* 全般 */
 body{
-    width: 100dvw;
+    width: 100svw;
     height: auto;
     background-color: #fefefe;
+    font-family: "dnp-shuei-gothic-kin-std", sans-serif;
+    font-weight: 500;
+    font-style: normal;
 }
 img {
 	user-drag: none;
@@ -12,12 +15,13 @@ img {
 a{
     text-decoration: none;
 }
+
 /* header */
 
 header{
     position: fixed;
     width: 100%;
-    height: 6dvh;
+    height: 6svh;
     /*background-color: #fefefe;*/
     padding: 0 2%;
     display: flex;
@@ -87,7 +91,7 @@ header#sm{
 /* wrap */
 
 .wrap{
-    padding-top: 6dvh;
+    padding-top: 6svh;
     width: 100%;
     height: auto;
 }
@@ -96,7 +100,7 @@ header#sm{
 
 .wrap .hero{
     width: 100%;
-    height: 35dvh;
+    height: 35svh;
     background-color: #fef9ed;
     padding: 5%;
     display: flex;
@@ -114,13 +118,13 @@ header#sm{
     width: 2em;
 }
 .wrap .hero .text p{
-    font-size: 3dvw;
-    line-height: 5.5dvw;
+    font-size: 3svw;
+    line-height: 5.5svw;
     color: #707070
 }
 .wrap .hero img{
     width: auto;
-    height: 25dvh;
+    height: 25svh;
 }
 
 /* contents */
@@ -152,7 +156,7 @@ header#sm{
 /* content */
 .wrap .contents .content{
     width: auto;
-    height: 50dvh;
+    height: 50svh;
     aspect-ratio: 16/9;
     padding: 3% 5%;
 }
@@ -165,6 +169,9 @@ header#sm{
     align-items: center;
     font-size: 1.5em;
     color: #707070;
+    font-family: "dnp-shuei-mgothic-std", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 .wrap .contents .title::before,
 .wrap .contents .title::after{
@@ -188,7 +195,7 @@ header#sm{
 }
 .wrap .contents .aligner img{
     width: auto;
-    height: 15dvh;
+    height: 15svh;
 }
 
 /* whats */
@@ -286,7 +293,7 @@ header#sm{
 }
 footer{
     width: 100%;
-    height: 20dvh;
+    height: 20svh;
     background-color: #404040;
     padding: 2% 2%;
     display: flex;
@@ -337,7 +344,7 @@ footer .right .text a:not(:last-child){
         display: none;
     }
     header{
-        height: 8dvh;
+        height: 8svh;
         position: fixed;
     }
     header#sm{
@@ -350,19 +357,19 @@ footer .right .text a:not(:last-child){
         height: 70%;
     }
     .wrap{
-        padding-top: 8dvh;
+        padding-top: 8svh;
         width: 100%;
         overflow: hidden;
     }
     .wrap .hero{
         width: 100%;
-        height: 20dvh;
+        height: 20svh;
         margin:0;
         padding:0;
     }
     .wrap .hero .text p{
-        font-size: 5dvw;
-        line-height: 5.5dvw;
+        font-size: 5svw;
+        line-height: 5.5svw;
         color: #707070
     }
     .wrap .hero img{
